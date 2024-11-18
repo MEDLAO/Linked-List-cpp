@@ -7,8 +7,16 @@
 
 #include <iostream>
 
+
+//Structure for a node in the linked list
+struct Node {
+    int data; // The value stored in the node
+    Node* next; // Pointer to the next node
+};
+
+
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    
     return 0;
 }
