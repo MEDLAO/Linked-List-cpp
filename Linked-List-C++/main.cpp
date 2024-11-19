@@ -14,6 +14,15 @@ struct Node {
     Node* next; // Pointer to the next node
 };
 
+//Define a the linked list class
+class LinkedList {
+    Node* head;
+    
+public:
+    //Constructor initializes head to NULL
+    LinkedList() : head(NULL) {}
+};
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
