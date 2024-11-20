@@ -21,6 +21,15 @@ class LinkedList {
 public:
     //Constructor initializes head to NULL
     LinkedList() : head(NULL) {}
+    
+    //Function to insert a new node at the beginning of the list
+    void insertAtBeginning(int value) {
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = head;
+        head = newNode;
+
+    }
 };
 
 
