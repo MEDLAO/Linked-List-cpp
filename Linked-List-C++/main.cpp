@@ -30,6 +30,29 @@ public:
         head = newNode;
 
     }
+    
+    //Function to insert a new node at the end of the list
+    void insertAtEnd(int value) {
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = NULL;
+        
+        //If the list is empty, update the head to the new node
+        if (!head) {
+            head = newNode;
+            return;
+        }
+        
+        //Traverse to the last node
+        Node* temp = head;
+        while (temp->next) {
+            temp = temp->next;
+        }
+        
+        //Update the last node's next to the new node
+        temp->next = newNode;
+    }
+    
 };
 
 
