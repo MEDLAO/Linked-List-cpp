@@ -6,6 +6,7 @@
 //
 
 #include <iostream>
+using namespace std;
 
 
 //Structure for a node in the linked list
@@ -51,6 +52,25 @@ public:
         
         //Update the last node's next to the new node
         temp->next = newNode;
+    }
+    
+    //Function to insert a new node at a specific position in the list
+    void insertAtPosition(int value, int position)
+    {
+        if (position < 1) {
+            cout << "Position should be >= 1." << endl;
+            return;
+        }
+        
+        if (position == 1) {
+            insertAtBeginning(value);
+            return;
+        }
+        
+        Node* newNode = new Node();
+        newNode->data = value;
+        
+        
     }
     
 };
