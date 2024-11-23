@@ -70,6 +70,11 @@ public:
         Node* newNode = new Node();
         newNode->data = value;
         
+        //Traverse to the node before the desired position
+        Node* temp = head;
+        for (int i = 1; i < position - 1 && temp; ++i) {
+            temp = temp->next;
+        }
         
     }
     
