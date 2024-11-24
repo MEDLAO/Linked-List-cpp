@@ -76,6 +76,16 @@ public:
             temp = temp->next;
         }
         
+        //If the position is out of range, print an error message
+        if (!temp) {
+            cout << "Position out of range." << endl;
+            delete newNode;
+            return;
+        }
+        
+        //Insert the new node at the desired position
+        newNode->next = temp->next;
+        temp->next = newNode;
     }
     
 };
