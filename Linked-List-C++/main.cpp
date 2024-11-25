@@ -101,6 +101,33 @@ public:
         delete temp;
     }
     
+    //Function to delete the last node of the list
+    void deleteFromEnd()
+    {
+        if (!head) {
+            cout << "List is empty." << endl;
+            return;
+        }
+        
+        if (!head->next) {
+            delete head;
+            head = NULL;
+            return;
+        }
+        
+        //Traverse to the second-to-last node
+        Node* temp = head;
+        while (temp->next->next) {
+            temp = temp->next;
+        }
+        
+        //Delete the last node
+        delete temp->next;
+        temp->next = NULL;
+        
+    }
+    
+    
 };
 
 
