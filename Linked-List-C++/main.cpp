@@ -123,8 +123,40 @@ public:
         
         //Delete the last node
         delete temp->next;
+        //Set the second-to-last node's next to NULL
         temp->next = NULL;
         
+    }
+    
+    //Function to delete a node at a specific postion from the list
+    void deleteFromPosition(int position)
+    {
+        if (position < 1) {
+            cout << "Position should be >= 1." << endl;
+            return;
+        }
+        
+        if (position == 1) {
+            deleteFromBeginning();
+            return;
+        }
+        
+        Node* temp = head;
+        for (int i = 1; i < position - 1 && temp; ++i) {
+            temp = temp->next;
+        }
+        
+        if (!temp || !temp->next) {
+            cout << "Possition out of range." << endl;
+            return;
+        }
+        
+        //Save the node to be deleted
+        Node* nodeToDelete = temp->next;
+        //Update the next pointer
+        temp->next = temp->next->next;
+        //Delete the node
+        delete nodeToDelete;
     }
     
     
