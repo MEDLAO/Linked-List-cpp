@@ -88,6 +88,19 @@ public:
         temp->next = newNode;
     }
     
+    //Function to delete the first node of the list
+    void deleteFromBeginning()
+    {
+        if (!head) {
+            cout << "List is empty." << endl;
+            return;
+        }
+        
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+    }
+    
 };
 
 
