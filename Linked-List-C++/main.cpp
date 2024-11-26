@@ -159,6 +159,22 @@ public:
         delete nodeToDelete;
     }
     
+    //Function to print the nodes of the linked list
+    void display() {
+        if (!head) {
+            cout << "List is empty." << endl;
+            return;
+        }
+        
+        Node* temp = head;
+        while (temp) {
+            cout << temp->data << " -> " << endl;
+            temp = temp->next;
+        }
+        
+        cout << "NULL" << endl;
+    }
+    
     
 };
 
