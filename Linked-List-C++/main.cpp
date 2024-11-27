@@ -180,7 +180,36 @@ public:
 
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    //Initialize a new linked list
+    LinkedList list1;
+    
+    //Insert elements at the end
+    list1.insertAtEnd(10);
+    list1.insertAtEnd(20);
+    
+    //Insert elements at the beginning
+    list1.insertAtBeginning(5);
+    
+    //Insert element at a specific postion
+    list1.insertAtPosition(15, 3);
+    
+    cout << "Linked list after insertions: " << endl;
+    list1.display();
+    
+    //Delete element from the beginning
+    list1.deleteFromBeginning();
+    cout << "Linked list after deleting from beginning: " << endl;
+    list1.display();
+    
+    //Delete element from the end
+    list1.deleteFromEnd();
+    cout << "Linked list after deleting from end: " << endl;
+    list1.display();
+    
+    //Delete element from a specific position
+    list1.deleteFromPosition(2);
+    cout << "Linked list after deleting from position 2: " << endl;
+    list1.display();
     
     return 0;
 }
